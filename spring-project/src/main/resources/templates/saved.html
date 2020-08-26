@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Login</title>
+<title>saved</title>
 <link rel="stylesheet" href="login.css" TYPE="text/css" media="screen">
 </head>
 
@@ -9,7 +9,6 @@
 	<div>
 		<form th:action="@{/login}" method="post">
 			<h1>Please sign in</h1>
-			<div th:if="${param.error}">Invalid email or password, retry</div>
 			<div th:if="${param}">Data is Saved</div>
 			<p>
 				Email: <input type="email" name="email" id="inputEmail"
@@ -19,9 +18,8 @@
 				Password: <input type="password" name="password" id="inputPassword"
 					placeholder="Password" />
 			</p>
-					<button type="submit" class="btn btn-primary" id="submit"
-							name="submit">SignIn</button>
-				
+			<button type="submit" class="btn btn-primary" id="submit"
+				name="submit">SignIn</button>
 		</form>
 		<br>
 		<br>
