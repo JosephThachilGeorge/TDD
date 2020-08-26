@@ -14,13 +14,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-project</name>
 	<description>Project for ATTSD Exam</description>
-	<repositories>
-		<repository>
-			<id>spring-milestone</id>
-			<name>Spring Maven MILESTONE Repository</name>
-			<url>http://repo.spring.io/libs-milestone</url>
-		</repository>
-	</repositories>
 	<properties>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<java.version>1.8</java.version>
