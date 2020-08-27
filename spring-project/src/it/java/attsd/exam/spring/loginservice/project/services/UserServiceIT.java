@@ -51,6 +51,7 @@ public class UserServiceIT {
 		User user = new User();
 		user.setPassword("password");
 		user.setEmail("email");
+		user.setUsernumber("usernumber");
 		user.setUsername("username");
 		service.saveUser(user);
 		User u = repository.findAll().get(0);
@@ -58,6 +59,7 @@ public class UserServiceIT {
 		assertEquals(u.getEmail(), user.getEmail());
 		assertEquals(u.getPassword(), user.getPassword());
 		assertEquals(u.getUsername(), user.getUsername());
+		assertEquals(u.getUsernumber(), user.getUsernumber());
 	}
 	
 	@Test(expected = UsernameNotFoundException.class)

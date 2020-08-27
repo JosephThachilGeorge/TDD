@@ -1,47 +1,28 @@
-<!-- <!DOCTYPE html> -->
-<!-- <html xmlns:th="http://www.thymeleaf.org"> -->
-<!-- <head> -->
-<!-- <meta charset="UTF-8" /> -->
-<!-- <title>LoginServices</title> -->
-<!-- <link rel="stylesheet" href="index.css" TYPE="text/css" media="screen"> -->
-<!-- </head> -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>LoginServices</title>
+<link rel="stylesheet" href="index.css" TYPE="text/css" media="screen">
+</head>
 
-<!-- <body> -->
-<!-- 	<h1>Login Services</h1><h2>(Welcome to Login Service)</h2> -->
-<!-- 	<div th:if="${loginservices.empty}"> -->
-<!-- 		<div>No Login Services</div> -->
-<!-- 	</div> -->
-<!-- 	<div th:unless="${loginservices.empty}"> -->
-<!-- 		<table id="loginservice_table"> -->
-<!-- 			<thead> -->
-<!-- 				<tr> -->
-<!-- 					<th>ServiceProviderName</th> -->
-<!-- 					<th>AveragePrice(Euro)</th> -->
-<!-- 				</tr> -->
-<!-- 			</thead> -->
-<!-- 			<tbody> -->
-<!-- 				<tr th:each="loginservice : ${loginservices}"> -->
-<!-- 					<td th:text="${loginservice.name}"></td> -->
-<!-- 					<td th:text="${loginservice.averagePrice}"></td> -->
-<!-- 					<td><a id="edit" th:href='@{/edit(id=${loginservice.id})}'><button>EDIT</button></a></td> -->
-<!-- 					<td><a id="delete" th:href='@{/delete(id=${loginservice.id})}'><button>DELETE</button></a></td> -->
-<!-- 				</tr> -->
-<!-- 			</tbody> -->
-<!-- 		</table> -->
-<!-- 	</div> -->
-<!-- 	<div> -->
-<!-- 		<p> -->
-<!-- 			Click <a th:href="@{/new}">here</a> to add a new Login Service! -->
-<!-- 		</p> -->
-<!-- 		<p> -->
-<!-- 			Click <a th:href="@{/logout}">here</a> to Logout! -->
-<!-- 		</p> -->
-<!-- 	</div> -->
-<!-- 	<div th:unless="${loginservices.empty}"> -->
-<!-- 		<p> -->
-<!-- 			Click <a th:href="@{/reset}">here</a> to delete all the Login Services! -->
-<!-- 		</p> -->
-<!-- 	</div> -->
-
-<!-- </body> -->
-<!-- </html> -->
+<body>
+	<h1>Login Services</h1><h2>(Welcome to Login Service)</h2>
+	<div th:if="${loginservices.empty}">
+		<div>No Login Services</div>
+	</div>
+	<div th:unless="${loginservices.empty}">
+		<table id="loginservice_table">
+			<thead>
+	
+			</thead>
+			<tbody>
+				<tr th:each="loginservice : ${loginservices}">
+					<td th:text="${loginservice.name}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>

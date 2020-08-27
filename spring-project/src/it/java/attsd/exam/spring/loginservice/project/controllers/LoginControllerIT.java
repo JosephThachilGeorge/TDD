@@ -72,7 +72,7 @@ public class LoginControllerIT {
 
 	@Test
 	public void testSaveUser() throws Exception {
-		mvc.perform(post("/signup").param("email", "email").param("username", "username").param("password", "pass")
+		mvc.perform(post("/signup").param("email", "email").param("username", "username").param("usernumber", "usernumber").param("password", "pass")
 				.with(csrf())).andExpect(status().is2xxSuccessful()).andExpect(view().name("login"));
 		assertEquals(1, repository.count());
 
@@ -84,9 +84,10 @@ public class LoginControllerIT {
 		user.setEmail("email1");
 		user.setUsername("usern");
 		user.setPassword("pass");
+		user.setUsernumber("9999");
 		repository.save(user);
 		assertEquals(1, repository.count());
-		mvc.perform(post("/signup").param("email", "email1").param("username", "usern").param("password", "pass")
+		mvc.perform(post("/signup").param("email", "email1").param("username", "usern").param("password", "pass").param("usernumber", "9999")
 				.with(csrf())).andExpect(status().is2xxSuccessful()).andExpect(view().name("error"));
 		assertEquals(1, repository.count());
 

@@ -55,10 +55,11 @@ public class LoginserviceWebControllerSteps {
 			driver.get(baseUrl +port+"/signup");
 		}
 
-	@When("^Enters email \"([^\"]*)\" , password \"([^\"]*)\" and username \"([^\"]*)\"$")
-	public void enters_email_password_and_username(String email, String password, String username) throws Throwable {
+	@When("^Enters email \"([^\"]*)\" , password \"([^\"]*)\" ,usernumber \"([^\"]*)\" and username \"([^\"]*)\"$")
+	public void enters_email_password_and_username(String email, String password,String usernumber, String username) throws Throwable {
 			driver.findElement(By.name("email")).sendKeys(email);
 			driver.findElement(By.name("password")).sendKeys(password);
+			driver.findElement(By.name("usernumber")).sendKeys(usernumber);
 			driver.findElement(By.name("username")).sendKeys(username);
 			driver.findElement(By.name("submit")).click();
 		}

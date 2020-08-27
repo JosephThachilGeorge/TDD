@@ -46,11 +46,13 @@ public class UserServiceWithMockBeanTest {
 		user.setPassword("password");
 		user.setEmail("email");
 		user.setUsername("fullname");
+		user.setUsernumber("9999");
 		when(userRepository.save(isA(User.class))).thenReturn(user);
 		when(passEncoder.encode(anyString())).thenReturn("password");
 		User u = userService.saveUser(user);
 		assertEquals("email", u.getEmail());
 		assertEquals("password", u.getPassword());
+		assertEquals("9999", u.getUsernumber());
 		assertEquals("fullname", u.getUsername());
 		verify(userRepository, times(1)).save(isA(User.class));
 	}

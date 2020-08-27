@@ -46,9 +46,10 @@ public class LoginControllerTest {
 		User user = new User();
 		user.setEmail("email");
 		user.setPassword("pass");
+		user.setUsernumber("9999");
 		user.setUsername("user");
 		mvc.perform(post("/signup")
-				.param("email", user.getEmail()).param("username", user.getUsername()).param("password", user.getPassword()))
+				.param("email", user.getEmail()).param("username", user.getUsername()).param("usernumber", user.getUsernumber()).param("password", user.getPassword()))
 		.andExpect(view().name("login"))
 		.andExpect(status().isOk());
 ;
@@ -59,14 +60,16 @@ public class LoginControllerTest {
 		User user = new User();
 		user.setEmail("Jose@gmail");
 		user.setPassword("pass");
+		user.setUsernumber("9999");
 		user.setUsername("Jose");
 		when(userService.findUserByEmail("jose@gmail")).thenReturn(user);
 		User user2 = new User();
 		user2.setEmail("jose@gmail");
 		user.setPassword("password");
+		user.setUsernumber("99");
 		user.setUsername("jose10");
 		mvc.perform(post("/signup")
-				.param("email", user2.getEmail()).param("username", user2.getUsername()).param("password", user2.getPassword()))
+				.param("email", user2.getEmail()).param("username", user2.getUsername()).param("password", user2.getPassword()).param("usernumber", user2.getUsernumber()))
 		.andExpect(view().name("error"))
 		.andExpect(status().isOk());
 	}
