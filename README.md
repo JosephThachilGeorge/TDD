@@ -25,7 +25,5 @@ Code quality with Sonarcloud:
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=JosephThachilGeorge_TDD&metric=security_rating)](https://sonarcloud.io/dashboard?id=JosephThachilGeorge_TDD)
 
 
-The following publication has used for developing "Login System" Web application with TDD:
 
-Lorenzo Bettini, Test-Driven Development, Build Automation, Continuous Integration with Java, Eclipse and friends, Leanpub, 2018
 
