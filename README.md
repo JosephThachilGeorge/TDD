@@ -4,8 +4,6 @@ Developer: Joseph Thachil George
 
 This project “Login System” is aimed to manage a user login with valid credentials and store user data in database (repository management).
 
-Build status with Travis CI:
-[![Build Status](https://travis-ci.org/JosephThachilGeorge/TDD.svg?branch=master)](https://travis-ci.org/JosephThachilGeorge/TDD)
 
 Coverage status with Coveralls:
 [![Coverage Status](https://coveralls.io/repos/github/JosephThachilGeorge/TDD/badge.svg?branch=master)](https://coveralls.io/github/JosephThachilGeorge/TDD?branch=master)
